@@ -13050,26 +13050,22 @@ div#notebook {
   }
 }
 /* RB style*/
-img{
-        max-width: 100%;
-        height: auto;
-        display: block; /* remove extra space below image */
-    }
-.img-container{
-  
+.blog-title{
+  background: url(../images/hero-bg-3000.jpg);
+  background-size: cover;
+  height: 90vh;
   display: flex;
-  width: auto;
-  height: 500px;
+  flex-direction: row;
   justify-content: center;
-  text-align: center;
-  
-}  
-.img-container img{
-  height: 100%;
-  width: auto;
+
+
+
 }
 
 
+.blog-content{
+  height: 100px;
+}
 </style>
 
 
@@ -13114,13 +13110,15 @@ img{
     <!-- End of mathjax configuration --></head>
 <body>
   <!-- rb自己添加 1. 封面圖-->
+  <section class = "blog-title">
   <div class="img-container">
-    <!--<h1 class = "centered">網路爬蟲</h1>  -->
-    <img src="../images/hero-bg-3000.jpg" alt="intro_pic"> 
+    <h1 class = "centered">網路爬蟲</h1>  
+    <!--<img src="../images/hero-bg-3000.jpg" alt="intro_pic"> -->
       
   </div>
-
+  </section>
   <!--x---- rb自己添加----x--->
+  <div class = "blog-content"></div> <!-- space between 封面&blog內容-->
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -13488,7 +13486,8 @@ img{
 
 </div>
     </div>
-  </div>
+  
+</div>
 </body>
 
 
