@@ -13049,6 +13049,27 @@ div#notebook {
     page-break-inside: avoid;
   }
 }
+/* RB style*/
+img{
+        max-width: 100%;
+        height: auto;
+        display: block; /* remove extra space below image */
+    }
+.img-container{
+  
+  display: flex;
+  width: auto;
+  height: 500px;
+  justify-content: center;
+  text-align: center;
+  
+}  
+.img-container img{
+  height: 100%;
+  width: auto;
+}
+
+
 </style>
 
 
@@ -13093,9 +13114,13 @@ div#notebook {
     <!-- End of mathjax configuration --></head>
 <body>
   <!-- rb自己添加 1. 封面圖-->
-  
-  <img src="images/hero-bg-3000.jpg" alt="intro_pic">
+  <div class="img-container">
+    <!--<h1 class = "centered">網路爬蟲</h1>  -->
+    <img src="../images/hero-bg-3000.jpg" alt="intro_pic"> 
+      
+  </div>
 
+  <!--x---- rb自己添加----x--->
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
