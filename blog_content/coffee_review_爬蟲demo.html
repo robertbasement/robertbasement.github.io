@@ -13049,6 +13049,8 @@ div#notebook {
     page-break-inside: avoid;
   }
 }
+
+
 /* RB style*/
 .blog-title{
   background: url(../images/hero-bg-3000.jpg);
@@ -13068,14 +13070,22 @@ div#notebook {
 .blog-content{
   height: 100px;
 }
-
-@media only screen and (max-width :750px){
+/* 若螢幕的寬度<480px 就讓blog內容左右padding, 讓內容在中間
+並讓img設定為寬100% 以免跑版
+*/
+@media only screen and (max-width :480px){
 #notebook {
   display: flex;
   flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
 
 }
 
+#notebook img {
+        max-width: 100%;
+        margin:3rem 0 3rem;
+    }
 }
 </style>
 
