@@ -5,6 +5,8 @@
 
 <title>coffee_review_爬蟲demo</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
+
+
 <style type="text/css">
   pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -13051,6 +13053,7 @@ div#notebook {
 }
 
 
+
 /* RB style*/
 .blog-title{
   background: url(../images/hero-bg-3000.jpg);
@@ -13070,6 +13073,8 @@ div#notebook {
 .blog-content{
   height: 100px;
 }
+
+
 /* 若螢幕的寬度<480px 就讓blog內容左右padding, 讓內容在中間
 並讓img設定為寬100% 以免跑版
 */
@@ -13122,7 +13127,13 @@ div#notebook {
     }
     init_mathjax();
     </script>
-    <!-- End of mathjax configuration --></head>
+    <!-- End of mathjax configuration -->
+<!--加入blog content css-->  
+  
+
+  <link rel="stylesheet" href="./css/blog.css">
+
+  </head>
 <body>
   <!-- rb自己添加 1. 封面圖-->
   <section class = "blog-title">
@@ -13134,9 +13145,15 @@ div#notebook {
   </section>
   <!--x---- rb自己添加----x--->
   <div class = "blog-content"></div> <!-- space between 封面&blog內容-->
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
+  
+  <div class="row blog-content">
+  <div class="col-full blog-content__main">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
-
+  </div> 
+    
+    
+  </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="&#32178;&#36335;&#29228;&#34802;&#33287;&#36039;&#26009;&#25972;&#29702;demo">&#32178;&#36335;&#29228;&#34802;&#33287;&#36039;&#26009;&#25972;&#29702;demo<a class="anchor-link" href="#&#32178;&#36335;&#29228;&#34802;&#33287;&#36039;&#26009;&#25972;&#29702;demo">&#182;</a></h1>
