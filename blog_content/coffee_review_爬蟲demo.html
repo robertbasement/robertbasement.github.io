@@ -11098,7 +11098,7 @@ div.output_subarea {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
-  max-width: 100%; /* rb修改 原為(100-14ex)*/
+  max-width:cal(100-14ex); /* rb修改 原為cal(100-14ex)*/
 }
 div.output_scroll div.output_subarea {
   overflow-x: visible;
@@ -13073,6 +13073,11 @@ div#notebook {
 .blog-content{
   height: 100px;
 }
+.body{
+
+  font-size: 1.8rem;
+}
+
 
 
 /* 若螢幕的寬度<480px 就讓blog內容左右padding, 讓內容在中間
@@ -13131,9 +13136,11 @@ div#notebook {
 <!--加入blog content css-->  
   
 
-  <link rel="stylesheet" href="./css/blog.css">
 
-  </head>
+<link rel="stylesheet" href="../css/rb_adjust.css">
+  
+
+</head>
 <body>
   <!-- rb自己添加 1. 封面圖-->
   <section class = "blog-title">
@@ -13144,9 +13151,9 @@ div#notebook {
   </div>
   </section>
   <!--x---- rb自己添加----x--->
-  <div class = "blog-content"></div> <!-- space between 封面&blog內容-->
   
-  <div class="row blog-content">
+  <article class="blog-single">
+  <div class="row blog-content" style="position: relative">
   <div class="col-full blog-content__main">
     <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -13520,6 +13527,10 @@ div#notebook {
     
   
   </div>
+
+  </article>
+
+
 </body>
 
 

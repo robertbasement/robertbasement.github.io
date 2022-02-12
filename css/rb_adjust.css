@@ -1,0 +1,61 @@
+/* 解決output區域靠左的狀況*/
+div.output_subarea{
+    /* Modern browsers */
+    flex: 1;
+    max-width: 100%;
+}
+
+
+/* RB style*/
+.blog-title{
+    background: url(../images/hero-bg-3000.jpg);
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .blog-title .blog-background h1{
+    padding: 20rem;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+  }
+  
+  .blog-content{
+    height: 100px;
+  }
+  
+  .body{
+  
+    font-size: 1.6rem;
+  }
+  .blog-single{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media screen and (max-width: 600px) {
+
+    .blog-single{
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+  }
+
+
+
+  
+  /* 若螢幕的寬度<480px 就讓blog內容左右padding, 讓內容在中間
+  並讓img設定為寬100% 以免跑版
+  */
+  /*
+  @media screen and (max-width: 600px) {
+    .cell{
+    flex:50%
+  
+    }
+  }
+  */
