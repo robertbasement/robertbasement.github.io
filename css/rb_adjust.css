@@ -10,29 +10,30 @@ div.output_subarea{
 .blog-title{
     background: url(../images/hero-bg-3000.jpg);
     background-size: cover;
+    background-position: center;
     height: 90vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    width: auto;
   }
   .blog-title .blog-background h1{
     padding: 20rem;
-    font-size: 50px;
+    font-size: 6rem;
     text-align: center;
     color: white;
+    word-break:keep-all; /*中文每一個都視為獨立的字 所以當寬度不夠時 
+    瀏覽器會自動換行 故用這個確保其皆為橫列*/
   }
   
-  .blog-content{
-    height: 100px;
-  }
   
-  .body{
-  
+  .body{ 
     font-size: 1.6rem;
   }
+  
   .blog-single{
     display: flex;
     flex-direction: column;
+    align-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   
   @media screen and (max-width: 600px) {
