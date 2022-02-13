@@ -9,33 +9,60 @@ div.output_subarea{
 /* RB style*/
 .blog-title{
     background: url(../images/hero-bg-3000.jpg);
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /*圖會自動填滿這個區域*/
+    background-position: center; /*垂直&左右置中*/
     height: 90vh;
     width: auto;
   }
   .blog-title .blog-background h1{
-    padding: 20rem;
+    padding-top: 25rem;
     font-size: 6rem;
     text-align: center;
     color: white;
     word-break:keep-all; /*中文每一個都視為獨立的字 所以當寬度不夠時 
     瀏覽器會自動換行 故用這個確保其皆為橫列*/
   }
-  
-  
-  .body{ 
-    font-size: 1.6rem;
+  .blog-title .blog-background h3{
+    padding-top: 10px;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    word-break:keep-all;
   }
-  
+   /*將整體的字從預設13px調大, 並拉高行距*/
+  body{ 
+    font-size: 2rem;
+    line-height: 1.875;
+  }
+ /*將整個blog內容 左右padding 30px 使兩側留白*/
   .blog-single{
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  
+
+  .container img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    }
+
+
+ #notebook-container{
+
+    -webkit-box-shadow: none;
+    box-shadow: none; /*覆蓋原先的陰影*/
+    
+ }
+
+div#notebook-container{
+    padding: 0 0 0 0; /*覆蓋原先的padding*/
+
+
+}
+
   @media screen and (max-width: 600px) {
 
     .blog-single{
@@ -44,9 +71,16 @@ div.output_subarea{
 
     }
 
+    .container img{
+        max-height: 500px;  
+        width: auto;
+
+    }
+    body{ 
+        font-size: 1.6rem;
+        line-height: 1.875;
+      }
   }
-
-
 
   
   /* 若螢幕的寬度<480px 就讓blog內容左右padding, 讓內容在中間
