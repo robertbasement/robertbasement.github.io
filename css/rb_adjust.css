@@ -31,6 +31,7 @@ div.output_subarea{
   }
    /*將整體的字從預設13px調大, 並拉高行距*/
   body{ 
+    background: white; /*沿用styleshout的css的話 其bg會是黑色的*/
     font-size: 2rem;
     line-height: 1.875;
   }
@@ -47,6 +48,7 @@ div.output_subarea{
     display: block;
     margin: auto;
     width: 100%;
+    max-width: 600px;
     }
 
 
