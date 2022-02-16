@@ -13022,8 +13022,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-
-
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 body {
@@ -13053,6 +13051,11 @@ div#notebook {
 </style>
 
 
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="custom.css">
+
+
 <!-- CSS
     ================================================== -->
     
@@ -13061,13 +13064,11 @@ div#notebook {
     <link rel="stylesheet" href="../css/vendor.css">
 <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
 
-
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
+    <script src="../js/modernizr.js"></script>
 <!--rb custom css-->
 <link rel="stylesheet" href="../css/rb_adjust.css">
+
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
@@ -13090,19 +13091,29 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
-<body>
+    <!-- End of mathjax configuration -->
+   
+    
+    <!-- Java Script
+    ================================================== -->
+    
+    
+  
+
+
+  </head>
+<body id="top">
 <!--header-->
 <header class="s-header">
 
   <div class="header-logo">
       <a href="index.html">
-          <img src="images/logo.svg" alt="Homepage">
+          <img src="../images/logo.svg" alt="Homepage">
       </a>
   </div>
 
   <div class="header-content">
-
+      
       <nav class="row header-nav-wrap">
           <ul class="header-nav">
               <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
@@ -14302,7 +14313,10 @@ model會產生出output，也就是model的預測結果
     </article>  
 </body>
 
- 
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/plugins.js"></script>
+<script src="../js/main.js"></script>
+
 
 
 </html>
