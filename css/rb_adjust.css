@@ -37,6 +37,7 @@ div.output_subarea{
     background: white; /*沿用styleshout的css的話 其bg會是黑色的*/
     font-size: 2rem;
     line-height: 1.875;
+    padding: 0%;
   }
  /*將整個blog內容 左右padding 30px 使兩側留白*/
   .blog-single{

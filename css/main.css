@@ -1872,7 +1872,7 @@ input::-moz-focus-inner {
 @media screen and (max-width:1000px) {
   .header-content .btn {
     height: 4.8rem !important;
-    /* line-height: 4.4rem !important; */
+    line-height: 4.4rem !important;
   }
 
 }

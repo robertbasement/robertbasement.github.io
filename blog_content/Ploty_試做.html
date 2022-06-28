@@ -3,7 +3,18 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RCA_data_preprocessing</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Ploty_試做</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<!-- CSS
+    ================================================== -->  
+    <link rel="stylesheet" href="../css/nav_bar.css">
+<!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+
+<!--rb custom css
+    ================================================== -->
+    <link rel="stylesheet" href="../css/rb_adjust.css">
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13,22 +24,22 @@ td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: #ffffcc }
 .highlight { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
@@ -41,15 +52,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .kt { color: #B00040 } /* Keyword.Type */
 .highlight .m { color: #666666 } /* Literal.Number */
 .highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .na { color: #687822 } /* Name.Attribute */
 .highlight .nb { color: #008000 } /* Name.Builtin */
 .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
 .highlight .no { color: #880000 } /* Name.Constant */
 .highlight .nd { color: #AA22FF } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
 .highlight .nf { color: #0000FF } /* Name.Function */
-.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nl { color: #767600 } /* Name.Label */
 .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
 .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
 .highlight .nv { color: #19177C } /* Name.Variable */
@@ -66,11 +77,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
 .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
 .highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
@@ -13050,21 +13061,6 @@ div#notebook {
   }
 }
 </style>
-
-
-<!-- CSS
-    ================================================== -->  
-    <link rel="stylesheet" href="../css/nav_bar.css">
-<!-- script
-    ================================================== -->
-    <script src="../js/modernizr.js"></script>
-
-<!--rb custom css
-    ================================================== -->
-<link rel="stylesheet" href="../css/rb_adjust.css">
-
-
-
 <!-- Load mathjax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
     <!-- MathJax configuration -->
@@ -13099,45 +13095,7 @@ div#notebook {
     init_mathjax();
     </script>
     <!-- End of mathjax configuration --></head>
-<body id="top">
-  
-<header class="s-header">
-
-  <div class="header-logo">
-      <a href="index.html">
-          <img src="../images/logo.svg" alt="Homepage">
-      </a>
-  </div>
-
-  <div class="header-content">
-      
-      <nav class="row header-nav-wrap">
-          <ul class="header-nav">
-              <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
-              <li><a class="smoothscroll" href="#about" title="About">About Me</a></li>
-              <li><a class="smoothscroll" href="#portfolio" title="Works">Projects</a></li>
-          </ul>
-      </nav> <!-- end header-nav-wrap -->
-      <!-- <li><a class="smoothscroll hidden" href="#services" title="Services">Projects</a></li>
-              <li><a href="mailto:#0" title="Contact us" class = 'hidden'>Say Hello</a></li>-->
-
-  </div> <!-- end header-content -->
-
-  <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-
-</header> 
-
-<section class = "blog-title">
-  <div class="blog-background">
-    <h1>網路爬蟲</h1>  
-    <h3>Coffee review資料爬取</h3>
-    <!--<img src="../images/hero-bg-3000.jpg" alt="intro_pic"> -->
-      
-  </div>
-  </section>
-
-
-  <article class="blog-single">
+<body id = 'top'>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -13146,99 +13104,7 @@ div#notebook {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
-
-<span class="n">data_path</span> <span class="o">=</span> <span class="s1">&#39;/Users/robert/git_RCA/drive-download-20211018T064401Z-001&#39;</span>
-<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">listdir</span><span class="p">(</span><span class="n">data_path</span><span class="p">)]</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>54</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="%E4%B8%80-:-%E5%BE%9E%E6%89%80%E6%9C%89data%E4%B8%AD%E6%8A%93%E5%87%BA-'%E5%9C%8B%E5%AE%B6%E5%90%8D%E7%A8%B1'&amp;'%E7%94%A2%E5%93%81%E4%BB%A3%E8%99%9F'">&#19968; : &#24478;&#25152;&#26377;data&#20013;&#25235;&#20986; '&#22283;&#23478;&#21517;&#31281;'&amp;'&#29986;&#21697;&#20195;&#34399;'<a class="anchor-link" href="#%E4%B8%80-:-%E5%BE%9E%E6%89%80%E6%9C%89data%E4%B8%AD%E6%8A%93%E5%87%BA-'%E5%9C%8B%E5%AE%B6%E5%90%8D%E7%A8%B1'&amp;'%E7%94%A2%E5%93%81%E4%BB%A3%E8%99%9F'">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#set只會保留unique value </span>
-<span class="c1">#note: 原始檔中 其中一個UK的K是小寫 我就直接修改檔名了 </span>
-
-<span class="n">countries</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span> 
-    <span class="n">countries</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#將國家名字拆出來</span>
-<span class="n">countries</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;Australia&#39;,
- &#39;Brazil&#39;,
- &#39;Canada&#39;,
- &#39;China&#39;,
- &#39;France&#39;,
- &#39;Germany&#39;,
- &#39;Italy&#39;,
- &#39;Korea&#39;,
- &#39;Malaysia&#39;,
- &#39;Myanmar&#39;,
- &#39;NewZealand&#39;,
- &#39;Philippines&#39;,
- &#39;Russian&#39;,
- &#39;Singapore&#39;,
- &#39;Taiwan&#39;,
- &#39;UK&#39;,
- &#39;US&#39;,
- &#39;VietNam&#39;}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;總共國家數: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">countries</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install plotly
 </pre></div>
 
     </div>
@@ -13251,452 +13117,9 @@ div#notebook {
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>總共國家數: 18
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="%E4%BA%8C:-%E5%85%88%E6%B8%AC%E8%A9%A6%E5%96%AE%E4%B8%80%E5%9C%8B%E5%AE%B6%E7%9A%84%E8%A8%88%E7%AE%97-%E4%BB%A5%E5%8F%B0%E7%81%A3%E7%9A%84data%E7%82%BA%E4%BE%8B">&#20108;: &#20808;&#28204;&#35430;&#21934;&#19968;&#22283;&#23478;&#30340;&#35336;&#31639; &#20197;&#21488;&#28771;&#30340;data&#28858;&#20363;<a class="anchor-link" href="#%E4%BA%8C:-%E5%85%88%E6%B8%AC%E8%A9%A6%E5%96%AE%E4%B8%80%E5%9C%8B%E5%AE%B6%E7%9A%84%E8%A8%88%E7%AE%97-%E4%BB%A5%E5%8F%B0%E7%81%A3%E7%9A%84data%E7%82%BA%E4%BE%8B">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#測試一下檔名&amp;收尋方式 以taiwan為例</span>
-<span class="n">country_list</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#&gt;&gt;&gt;找出檔名中有taiwan的檔案 並將其存在country_list中</span>
-<span class="n">file_code</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#&gt;&gt;&gt;將檔名最後的編號取出來 方便最後儲存檔案用</span>
-<span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-    <span class="k">if</span> <span class="s1">&#39;Taiwan&#39;</span> <span class="ow">in</span> <span class="n">file_name</span><span class="p">:</span>
-        <span class="n">country_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
-        <span class="n">file_code</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">country_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">file_code</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Taiwan_importvalue22060010006.xlsx&#39;, &#39;Taiwan_importvalue220890.xlsx&#39;, &#39;Taiwan_importvalue220830.xlsx&#39;]
-[&#39;22060010006.xlsx&#39;, &#39;220890.xlsx&#39;, &#39;220830.xlsx&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>時間的長度為2012/1~2020/12<br>
-總共會有12*9 = 108個col</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#不能用index_col = 0，因為資料columns的排序並不一致，有時country在前、有時 hscode在前</span>
-<span class="n">data_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">country_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-<span class="n">data_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">country_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-<span class="n">data_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">country_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>hscode</th>
-      <th>value201201</th>
-      <th>value201202</th>
-      <th>value201203</th>
-      <th>value201204</th>
-      <th>value201205</th>
-      <th>value201206</th>
-      <th>value201207</th>
-      <th>value201208</th>
-      <th>value201209</th>
-      <th>...</th>
-      <th>value202003</th>
-      <th>value202004</th>
-      <th>value202005</th>
-      <th>value202006</th>
-      <th>value202007</th>
-      <th>value202008</th>
-      <th>value202009</th>
-      <th>value202010</th>
-      <th>value202011</th>
-      <th>value202012</th>
-    </tr>
-    <tr>
-      <th>country</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>China</th>
-      <td>22060010006</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>8</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>France</th>
-      <td>22060010006</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>Japan</th>
-      <td>22060010006</td>
-      <td>504</td>
-      <td>742</td>
-      <td>541</td>
-      <td>332</td>
-      <td>477</td>
-      <td>327</td>
-      <td>365</td>
-      <td>434</td>
-      <td>226</td>
-      <td>...</td>
-      <td>1513</td>
-      <td>534</td>
-      <td>378</td>
-      <td>901</td>
-      <td>925</td>
-      <td>795</td>
-      <td>1216</td>
-      <td>1019</td>
-      <td>1679</td>
-      <td>2369</td>
-    </tr>
-    <tr>
-      <th>Korea</th>
-      <td>22060010006</td>
-      <td>6</td>
-      <td>2</td>
-      <td>1</td>
-      <td>0</td>
-      <td>6</td>
-      <td>5</td>
-      <td>0</td>
-      <td>4</td>
-      <td>2</td>
-      <td>...</td>
-      <td>2</td>
-      <td>4</td>
-      <td>1</td>
-      <td>3</td>
-      <td>4</td>
-      <td>1</td>
-      <td>4</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>United States</th>
-      <td>22060010006</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 109 columns</p>
-</div></div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">RCA_calulator</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">,</span> <span class="n">data3</span><span class="p">,</span> <span class="n">country_name</span><span class="p">):</span>
-        <span class="c1">#確認column 總共有108個 若col數量和108對不上時，報錯</span>
-        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">data1</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">::])</span> <span class="o">==</span> <span class="mi">108</span>
-        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">data2</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">::])</span> <span class="o">==</span> <span class="mi">108</span>
-        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">data3</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">::])</span> <span class="o">==</span> <span class="mi">108</span>
-        
-        <span class="bp">self</span><span class="o">.</span><span class="n">data1</span> <span class="o">=</span> <span class="n">data1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data2</span> <span class="o">=</span> <span class="n">data2</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data3</span> <span class="o">=</span> <span class="n">data3</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data1_hs</span> <span class="o">=</span> <span class="n">data1</span><span class="p">[</span><span class="s1">&#39;hscode&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data2_hs</span> <span class="o">=</span> <span class="n">data2</span><span class="p">[</span><span class="s1">&#39;hscode&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data3_hs</span> <span class="o">=</span> <span class="n">data3</span><span class="p">[</span><span class="s1">&#39;hscode&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">country_name</span> <span class="o">=</span> <span class="n">country_name</span>
-        
-        <span class="sd">&#39;&#39;&#39;分母的分母&#39;&#39;&#39;</span> <span class="c1">#sum&gt;&gt;每一個col垂直加總 最後再將三張表同月份的值加總</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">total_Denominator</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data1</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">data2</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">data3</span><span class="o">.</span><span class="n">sum</span><span class="p">())[</span><span class="mi">1</span><span class="p">::]</span>
-        
-        <span class="sd">&#39;&#39;&#39;最後的分母&#39;&#39;&#39;</span>  
-        <span class="bp">self</span><span class="o">.</span><span class="n">child1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data1</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="mi">1</span><span class="p">::]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">total_Denominator</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">child2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data2</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="mi">1</span><span class="p">::]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">total_Denominator</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">child3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data3</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="mi">1</span><span class="p">::]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">total_Denominator</span>
-        
-        
-        <span class="sd">&#39;&#39;&#39;分子的分母&#39;&#39;&#39;</span>  <span class="c1">#總表 全部3張表直接水平加總 若缺失的部分會自動是補0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">all_molecular_of_Denominator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data1</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data2</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data3</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-        
-        <span class="sd">&#39;&#39;&#39;最後的分子&#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_m_1</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data1</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">all_molecular_of_Denominator</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">data1</span><span class="o">.</span><span class="n">index</span><span class="p">])</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_m_2</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data2</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">all_molecular_of_Denominator</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">data2</span><span class="o">.</span><span class="n">index</span><span class="p">])</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_m_3</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data3</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">all_molecular_of_Denominator</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">data3</span><span class="o">.</span><span class="n">index</span><span class="p">])</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        
-        <span class="sd">&#39;&#39;&#39;RCA&#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_1</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">final_m_1</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">child1</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_2</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">final_m_2</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">child2</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_3</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">final_m_3</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">child3</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        
-        <span class="sd">&#39;&#39;&#39;將hscode保留&#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_1</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;hscode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data1_hs</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_2</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;hscode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data2_hs</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_3</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;hscode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data3_hs</span>
-        
-    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_1</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;/Users/robert/git_RCA/RCA_final/RCA_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">country_name</span><span class="si">}{</span><span class="n">file_code</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_2</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;/Users/robert/git_RCA/RCA_final/RCA_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">country_name</span><span class="si">}{</span><span class="n">file_code</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">final_3</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;/Users/robert/git_RCA/RCA_final/RCA_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">country_name</span><span class="si">}{</span><span class="n">file_code</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">RCA_calulator</span><span class="p">(</span><span class="n">data_1</span><span class="p">,</span><span class="n">data_2</span><span class="p">,</span><span class="n">data_3</span><span class="p">,</span><span class="s1">&#39;Taiwan&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="%E6%AA%A2%E8%A6%96%E8%A8%88%E7%AE%97%E9%81%8E%E7%A8%8B:-%E4%BB%A5taiwan%E7%AC%AC%E4%B8%80%E5%80%8Bcolumn-2012/01%E7%82%BA%E4%BE%8B">&#27298;&#35222;&#35336;&#31639;&#36942;&#31243;: &#20197;taiwan&#31532;&#19968;&#20491;column 2012/01&#28858;&#20363;<a class="anchor-link" href="#%E6%AA%A2%E8%A6%96%E8%A8%88%E7%AE%97%E9%81%8E%E7%A8%8B:-%E4%BB%A5taiwan%E7%AC%AC%E4%B8%80%E5%80%8Bcolumn-2012/01%E7%82%BA%E4%BE%8B">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;分母的分母&#39;&#39;&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">total_Denominator</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>value201201    27339
-value201202    25073
-value201203    24151
-value201204    21265
-value201205    18037
-               ...  
-value202008    39027
-value202009    61710
-value202010    57486
-value202011    58713
-value202012    61401
-Length: 108, dtype: int64
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>27339為Taiwan 3張表2012/01值的總和</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;最後的分母&#39;&#39;&#39;</span>  
-<span class="c1">#這邊的child1是對應data1的分母 </span>
-<span class="c1">#以2012/01來說的話 是第一個col (504+6)/27339 = 0.0186</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">child1</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>value201201    0.018655
-value201202    0.029673
-value201203    0.022442
-value201204    0.015613
-value201205    0.026778
-                 ...   
-value202008    0.020396
-value202009    0.019770
-value202010    0.017830
-value202011    0.028716
-value202012    0.038713
-Length: 108, dtype: float64
+<pre>Requirement already satisfied: plotly in /usr/local/anaconda3/lib/python3.9/site-packages (5.6.0)
+Requirement already satisfied: tenacity&gt;=6.2.0 in /usr/local/anaconda3/lib/python3.9/site-packages (from plotly) (8.0.1)
+Requirement already satisfied: six in /usr/local/anaconda3/lib/python3.9/site-packages (from plotly) (1.16.0)
 </pre>
 </div>
 </div>
@@ -13710,67 +13133,11 @@ Length: 108, dtype: float64
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;分子的分母&#39;&#39;&#39;</span>  <span class="c1">#總表 全部3張表直接水平加總 若缺失的部分會自動是補0 ,為了版面只顯示2012/01</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">all_molecular_of_Denominator</span><span class="p">[</span><span class="s1">&#39;value201201&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="n">gapminder2007</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">gapminder</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;year == 2007&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>country
-Australia                  0.0
-Austria                    0.0
-Belgium                    0.0
-Bhutan                     0.0
-Bulgaria                   0.0
-Canada                     3.0
-China                      0.0
-Cyprus                     0.0
-Czech Republic             0.0
-Denmark                    0.0
-Finland                    0.0
-France                     0.0
-Germany                    0.0
-Hungary                    0.0
-Iceland                    0.0
-India                      0.0
-Ireland                   31.0
-Israel                     0.0
-Italy                      0.0
-Japan                   1243.0
-Korea                     46.0
-Latvia                     0.0
-Lithuania                  0.0
-Malaysia                   0.0
-Mexico                     0.0
-Netherlands                0.0
-New Zealand                0.0
-Panama                     0.0
-Philippines                0.0
-Poland                     0.0
-Portugal                   0.0
-Singapore                  0.0
-Slovakia                   0.0
-South Africa               0.0
-Spain                      0.0
-Sweden                     0.0
-Switzerland                0.0
-Thailand                  21.0
-Trinidad and Tobago        0.0
-United Kingdom         25930.0
-United States             65.0
-Name: value201201, dtype: float64
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13780,73 +13147,10 @@ Name: value201201, dtype: float64
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#我們來觀察一下‘Japan‘的值好了 </span>
-<span class="n">data</span><span class="o">.</span><span class="n">all_molecular_of_Denominator</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Japan&#39;</span><span class="p">,</span><span class="s1">&#39;value201201&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">gapminder2007</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;gdpPercap&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;lifeExp&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;continent&quot;</span><span class="p">)</span> 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1243.0</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>1243正好是三張表Japan對台灣出口的加總<br>
-分別是 504 + 73 + 666 = 1243.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;最後的分子&#39;&#39;&#39;</span>
-<span class="c1">#已data_1為例的話 就是504</span>
-<span class="c1">#而最後的分子為 504/1243 = 0.4054 我們來檢查看看</span>
-<span class="n">data</span><span class="o">.</span><span class="n">final_m_1</span><span class="p">[</span><span class="s1">&#39;value201201&#39;</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>country
-China            0.000000
-France           0.000000
-Japan            0.405471
-Korea            0.130435
-United States    0.000000
-Name: value201201, dtype: float64</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13856,65 +13160,7 @@ Name: value201201, dtype: float64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#最終data1的RCA Japan對Taiwan = 0.4054 / 0.0186 = 21.7956</span>
-<span class="c1">#些微的運算差為浮點位數問題</span>
-<span class="n">data</span><span class="o">.</span><span class="n">final_1</span><span class="p">[</span><span class="s1">&#39;value201201&#39;</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>country
-China             0.000000
-France            0.000000
-Japan            21.735611
-Korea             6.992072
-United States     0.000000
-Name: value201201, dtype: float64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="%E4%B8%89:%E8%B7%91%E5%85%A8%E9%83%A818%E5%80%8B%E5%9C%8B%E5%AE%B6">&#19977;:&#36305;&#20840;&#37096;18&#20491;&#22283;&#23478;<a class="anchor-link" href="#%E4%B8%89:%E8%B7%91%E5%85%A8%E9%83%A818%E5%80%8B%E5%9C%8B%E5%AE%B6">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#NewZealand_importdvalue220890 其column名稱hscode 多打了一個c 故程式會出錯 &gt;&gt; 已手動更正xlsx內容</span>
-
-<span class="k">for</span> <span class="n">country_name</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">countries</span><span class="p">):</span>
-    <span class="c1">#將某國的檔名&amp;hscode提取</span>
-    <span class="n">country_list</span> <span class="o">=</span> <span class="p">[]</span> 
-    <span class="n">file_code</span> <span class="o">=</span> <span class="p">[]</span> 
-    <span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">country_name</span> <span class="ow">in</span> <span class="n">file_name</span><span class="p">:</span>
-            <span class="n">country_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
-            <span class="n">file_code</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-    <span class="c1">#計算RCA並儲存</span>
-    <span class="n">data_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">country_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-    <span class="n">data_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">country_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-    <span class="n">data_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">country_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">RCA_calulator</span><span class="p">(</span><span class="n">data_1</span><span class="p">,</span><span class="n">data_2</span><span class="p">,</span><span class="n">data_3</span><span class="p">,</span><span class="n">country_name</span><span class="p">)</span>
-    <span class="n">data</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">&quot;/Users/robert/Documents/碩士畢業論文/figure_output/ploty_test.html&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13924,33 +13170,14 @@ Name: value201201, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="OVER">OVER<a class="anchor-link" href="#OVER">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<p>圖片示範!
+<a href="&quot;/Users/robert/Documents/碩士畢業論文/figure_output/ploty_test.html&quot;">互動圖</a></p>
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
-
 </div>
     </div>
   </div>
-</article>
-
-
-<!-- Java Script
-  ================================================== -->
-  <script src="../js/jquery-3.2.1.min.js"></script>
-  <script src="../js/plugins.js"></script>
-  <script src="../js/main.js"></script>
 </body>
 
 
