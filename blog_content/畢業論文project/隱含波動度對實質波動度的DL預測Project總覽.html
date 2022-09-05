@@ -13099,38 +13099,34 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration --></head>
 <body id="top">
+<!-- header
+    ================================================== -->
+    <header class="s-header">
 
-  <!-- header
-  ================================================== -->
-  <header class="s-header">
+      <div class="header-logo">
+          <a href="index.html">
+              <img src="images/logo.svg" alt="Homepage">
+          </a>
+      </div>
 
-    <div class="header-logo">
-        <a href="index.html">
-            <img src="../../images/logo.svg" alt="Homepage">
-        </a>
-    </div>
+      <div class="header-content">
+  
+          <nav class="row header-nav-wrap">
+              <ul class="header-nav">
+                  <li><a class="smoothscroll" href="../../index.html" title="Intro">Home</a></li>
+                  <li><a class="smoothscroll" href="#" title="About">Project_index</a></li>
 
-    <div class="header-content">
+              </ul>
+          </nav> 
+          <!-- end header-nav-wrap -->
+         
+          <!-- <a href="#0" class="btn btn--stroke btn--small">Download CV</a> -->
 
-        <nav class="row header-nav-wrap">
-            <ul class="header-nav">
-                <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
-                <li><a class="smoothscroll" href="#about" title="About">About Me</a></li>
-                <li><a class="smoothscroll" href="#portfolio" title="Works">Projects</a></li>
-                <li><a class="smoothscroll hidden" href="#services" title="Services">blog</a></li>
-                <!-- <li><a href="mailto:#0" title="Contact us" class = 'hidden'>Say Hello</a></li> -->
-            </ul>
-        </nav> 
-        <!-- end header-nav-wrap -->
-        
-        <!-- <a href="#0" class="btn btn--stroke btn--small">Download CV</a> -->
+      </div> <!-- end header-content -->
 
-    </div> <!-- end header-content -->
-
-    <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+      <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
   </header> 
-  
 <!-- rb自己添加 1. 封面圖-->
 <section class = "blog-title">
   <div class="blog-background">
@@ -13199,15 +13195,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
+<ul class = "part_ref">
   
 <li><a href="./隱含波動度對實質波動度的DL預測Part1_資料爬取_清理_db建立.html">Part 1: [<strong>資料處理</strong>] </a>從台灣證券交易所、期貨交易所跟央行取得台股大盤5秒日內資料、台股選擇權日資料與隔夜拆款利率，並將其儲存在db中 </li> 
-<li>Part 2: [<strong>資料處理</strong>] 用台股大盤5秒日內資料計算RV，用央行隔夜拆款、大盤收盤、選擇權權利期間、選擇權履約價跟選擇權收盤價來估算IV，並進行驗證  </li>
-<li>Part 3: [<strong>資料視覺化</strong>] 將每日的RV與IV加權做資料視覺化，檢視在極端形況下兩者的關聯性  </li>
-<li>Part 4: [<strong>深度學習模型訓練</strong>] 架設LSTM模型，用RV跟RV+IV作為輸入資料進行訓練，並檢視在樣本外預測的表現  </li>
-<li>Part 5: [<strong>時間序列模型</strong>] 用AR跟GARCH來進行波動度預測，並擷取GARCH(1,1)的參數，用以後面混合模型  </li>
-<li>Part 6: [<strong>深度學習模型訓練</strong>] 用Part 4 架好的LSTM模型，用RV+GARCH參數跟RV+IV+GARCH參數作為輸入資料進行訓練，並檢視在樣本外預測的表現  </li>
-<li>Part 7: [<strong>交易策略</strong>] 用跨式交易策略(波動性策略)來檢視這4種類的預測結果，在實際交易上的表現如何  </li>
+<li><a href="./隱含波動度對實質波動度的DL預測Part2_資料轉換_function集建立.html">Part 2: [<strong>資料處理</strong>] </a>用台股大盤5秒日內資料計算RV，用央行隔夜拆款、大盤收盤、選擇權權利期間、選擇權履約價跟選擇權收盤價來估算IV，並進行驗證  </li>
+<li><a href="./隱含波動度對實質波動度的DL預測Part3_資料視覺化_單日個案分析.html">Part 3: [<strong>資料視覺化</strong>] </a>將每日的RV與IV加權做資料視覺化，檢視在極端形況下兩者的關聯性  </li>
+<li><a href="./隱含波動度對實質波動度的DL預測Part4_IV加權平均轉換_LSTM模型建立以及評估.html">Part 4: [<strong>深度學習模型訓練</strong>] </a>架設LSTM模型，用RV跟RV+IV作為輸入資料進行訓練，並檢視在樣本外預測的表現  </li>
+<li><a href="./隱含波動度對實質波動度的DL預測Part5_時間序列模型做特徵工程.html">Part 5: [<strong>時間序列模型</strong>] </a>用AR跟GARCH來進行波動度預測，並擷取GARCH(1,1)的參數，用以後面混合模型  </li>
+<li><a href="./隱含波動度對實質波動度的DL預測Part6_GARCH參數加入LSTM.html">Part 6: [<strong>深度學習模型訓練</strong>] </a>用Part 4 架好的LSTM模型，用RV+GARCH參數跟RV+IV+GARCH參數作為輸入資料進行訓練，並檢視在樣本外預測的表現  </li>
+<li><a href="./隱含波動度對實質波動度的DL預測Part7_建構交易策略.html">Part 7: [<strong>交易策略</strong>] </a>用跨式交易策略(波動性策略)來檢視這4種類的預測結果，在實際交易上的表現如何  </li>
 </ul>
 
 </div>

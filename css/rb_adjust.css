@@ -83,6 +83,11 @@ div#notebook-container{
       }
   }
 
+  .part_ref {
+    font-size: 1.6rem;
+
+
+  }
   
   /* 若螢幕的寬度<480px 就讓blog內容左右padding, 讓內容在中間
   並讓img設定為寬100% 以免跑版
